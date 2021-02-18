@@ -15,7 +15,7 @@ jobs:
         include:
           - version: latest
             os = ubuntu-latest
-            allow_failure: true
+            allow_failure: [true]
     steps:
       - name: checkout repository
         uses: actions/checkout@v2
