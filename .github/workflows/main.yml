@@ -47,7 +47,7 @@ jobs:
       - name: skim
         run: |
           chmod +x ./skim
-          ./skim root://eospublic.cern.ch//eos/root-eos/HiggsTauTauReduced/GluGluToHToTauTau.root skim_ggH.root 19.6 11467.0 0.1 > skim_ggh.log
+          ./skim root://eospublic.cern.ch//eos/root-eos/HiggsTauTauReduced/GluGluToHToTauTau.root skim_ggH.root 19.6 11467.0 0.1 > skim_ggH.log
 
       - uses: actions/upload-artifact@v2
         with:
