@@ -27,6 +27,6 @@ if abs(integral-expected_integral_pt_1) > 0.0001:
     print(f'Integral of ggH_pt_1 is different: {integral}')
     sys.exit(2)
 
-expected_number_of_bins = 30
+expected_number_of_bins = 32
 assert file.ggH_pt_2.GetNbinsX() == expected_number_of_bins, \
     f'Number of bins of ggH_pt_2 differs from the expected value of {expected_number_of_bins}'
