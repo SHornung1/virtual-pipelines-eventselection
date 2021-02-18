@@ -19,7 +19,7 @@ required_lines = [
    'Valid tau in selected pair: pass=813        all=813        -- eff=100.00 % cumulative eff=1.70 %',
 ]
 
-with open('skim_ggh.log', 'r') as logfile:
+with open('skim_ggH.log', 'r') as logfile:
     lines = [line.rstrip() for line in logfile]
     print('\n'.join(lines))
     for required_line in required_lines:

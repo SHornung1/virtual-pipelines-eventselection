@@ -51,14 +51,10 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: skim_ggH_log
-          path: skim_ggH.log
-
-      - uses: actions/upload-artifact@v2
-        with:
           name: skim_ggH
-          path: skim_ggH.root
-
+          path: |
+            skim_ggH.log
+            skim_ggH.root
 
   plot:
     needs: skim
@@ -81,7 +77,7 @@ jobs:
           path: hist_ggH.root
           
   test_ggH:
-    needs: [skim, plot]
+    needs: plot
     runs-on: ubuntu-latest
     container: rootproject/root-conda:6.18.04
     steps:
@@ -90,7 +86,7 @@ jobs:
       
       - uses: actions/download-artifact@v2
         with:
-          name: skim_ggH_log
+          name: skim_ggH
 
       - name: test_log
         run: python tests/test_cutflow_ggH.py
