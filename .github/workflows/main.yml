@@ -88,12 +88,12 @@ jobs:
         with:
           name: skim_ggH
 
-      - name: test_log
+      - name: test log
         run: python tests/test_cutflow_ggH.py
       
       - uses: actions/download-artifact@v2
         with:
           name: histograms
           
-      - name: test_plot
+      - name: test plot
         run: python tests/test_plot_ggH.py
