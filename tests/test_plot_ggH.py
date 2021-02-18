@@ -15,7 +15,7 @@ print('\n'.join(keys))
 for required_key in required_keys:
     if required_key not in keys:
         print(f'Required ROOT object key not found {required_key}')
-        syst.exit(1)
+        sys.exit(1)
 
 
 expected_integral_pt_1 = 222.88716647028923

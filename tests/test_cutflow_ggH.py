@@ -24,6 +24,6 @@ with open('skim_ggH.log', 'r') as logfile:
     print('\n'.join(lines))
     for required_line in required_lines:
         if required_line not in lines:
-            print(f'Did not find line in log file. {required_line}')
+            print(f'Did not find the following line in the log file: {required_line}')
             sys.exit(1)
 
