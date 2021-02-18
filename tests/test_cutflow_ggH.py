@@ -20,10 +20,10 @@ required_lines = [
 ]
 
 with open('skim_ggh.log', 'r') as logfile:
-    lines =  [line.rstrip() forline in logfile]
+    lines = [line.rstrip() for line in logfile]
     print('\n'.join(lines))
     for required_line in required_lines:
-        if not required_line in lines:
-            printf(f'Did not find line in log file. {required_line}')
+        if required_line not in lines:
+            print(f'Did not find line in log file. {required_line}')
             sys.exit(1)
 

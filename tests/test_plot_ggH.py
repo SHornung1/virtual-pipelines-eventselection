@@ -13,7 +13,7 @@ keys = [k.GetName() for k in file.GetListOfKeys()]
 
 print('\n'.join(keys))
 for required_key in required_keys:
-    if not required_key in keys:
+    if required_key not in keys:
         print(f'Required ROOT object key not found {required_key}')
         syst.exit(1)
 
