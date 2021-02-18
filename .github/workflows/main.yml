@@ -4,15 +4,17 @@ on: push
 
 jobs:
   build_skim:
-    runs-on: ubuntu-latest
+    runs-on: ${{matrix.os}}
     container: rootproject/root-conda:${{matrix.version}}
     continue-on-error: ${{matrix.allow_failure}}
     strategy:
       matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
         version: [6.18.04]
         allow_failure: [false]
         include:
           - version: latest
+            os = ubuntu-latest
             allow_failure: true
     steps:
       - name: checkout repository
